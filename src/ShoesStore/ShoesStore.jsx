@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ListShoes from "./ListShoes";
 import { dataShoes } from "./dataShoes";
-import ModalShoes from "./ShoesDetail";
+import ShoesDetail from "./ShoesDetail";
 
 export default class ShoesStore extends Component {
   state = {
@@ -167,7 +167,7 @@ export default class ShoesStore extends Component {
             </div>
           </div>
         </div>
-        <ModalShoes shoesDetail={this.state.shoesDetail} />
+        <ShoesDetail shoesDetail={this.state.shoesDetail} />
         <ListShoes
           shoesArr={this.state.shoesArr}
           handleViewDetail={this.handleViewDetail}
