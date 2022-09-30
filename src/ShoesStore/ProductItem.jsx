@@ -6,7 +6,7 @@ export default class ProductItem extends Component {
     return (
       <div className="col-3 text-left mb-3">
         <div className="card" style={{ width: "18rem" }}>
-          <img className="card-img-top" src={image} alt="Card image cap" />
+          <img className="card-img-top" src={image} alt={image} />
           <div className="card-body">
             <h5 style={{ fontSize: "18px" }} className="card-title">
               {name}
@@ -22,7 +22,14 @@ export default class ProductItem extends Component {
             >
               View Detail
             </button>
-            <button className="btn btn-danger ml-1">Add to cart</button>
+            <button
+              onClick={() => {
+                this.props.handleAddToCart(this.props.shoesItem);
+              }}
+              className="btn btn-danger ml-1"
+            >
+              Add to cart
+            </button>
           </div>
         </div>
       </div>
