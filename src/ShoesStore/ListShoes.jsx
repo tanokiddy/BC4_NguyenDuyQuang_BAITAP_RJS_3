@@ -6,11 +6,13 @@ export default class ListShoes extends Component {
     return (
       <div className="container">
         <div className="row">
-          {this.props.shoesArr.map((item) => {
+          {this.props.shoesArr.map((item, index) => {
             return (
               <ProductItem
+                key={index}
                 shoesItem={item}
                 handleViewDetail={this.props.handleViewDetail}
+                handleAddToCart={this.props.handleAddToCart}
               />
             );
           })}
