@@ -22,6 +22,7 @@ export default class ProductItem extends Component {
             >
               View Detail
             </button>
+            <button className="btn btn-danger ml-1">Add to cart</button>
           </div>
         </div>
       </div>
